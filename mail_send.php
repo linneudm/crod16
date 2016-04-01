@@ -15,7 +15,7 @@
 	    $headers .= "MIME-Version: 1.0\r\n";
 	    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 	  
-	  mail($para, $assunto, $mensagem , $headers);
+		return mail($para, $assunto, $mensagem , $headers);
 
 
 	}
@@ -38,8 +38,7 @@
 	$assunto = "Inscrição";
 
 
-	if ($name && validaEmail($de) && $mensagem) {
-    	enviaEmail($de, $assunto, $mensagem, $para, $email_servidor);
+	if (enviaEmail($de, $assunto, $mensagem, $para, $email_servidor)) {
     	$pagina = "mail_ok.php";
 	} else {
     	$pagina = "mail_error.php";
