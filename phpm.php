@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 $name = trim($_POST['name']);
 $cidcim = $_POST['cidcim'];
@@ -43,7 +43,7 @@ $mail->SMTPAuth = true; // Usa autenticação SMTP? (opcional)
 $mail->From = "crodcentronortepi@gmail.com"; // Seu e-mail
 $mail->FromName = "CROD Centro-Norte PI"; // Seu nome
 $mail->Username = "crodcentronortepi@gmail.com";
-$mail->Password = "123demolay";
+$mail->Password = "senha";
 // Define os destinatário(s)
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 $mail->AddAddress('crodcentronortepi@gmail.com', 'CROD Centro-Norte PI');
