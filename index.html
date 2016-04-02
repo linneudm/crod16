@@ -250,15 +250,15 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Inscrição</h2>
                     <hr class="primary">
-                <form action="mail_send.php" method="post">
+                <form action="phpm.php" method="post">
                   <div class="form-group">
                     <label for="cName">Nome</label>
                     <input type="text" name="name" class="form-control" id="name" placeholder="Insira seu nome completo" required>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-6">
-                        <label for="cid">CID/CIM</label>
-                        <input type="text" class="form-control" id="cidcim" placeholder="Insira sua CID/CIM">
+                        <label for="cidcim">CID/CIM</label>
+                        <input type="text" name="cidcim" class="form-control" id="cidcim" placeholder="Insira sua CID/CIM">
                     </div>
                     <div class="col-lg-3">
                         <label for="aniv">Data de Nascimento</label>
@@ -266,7 +266,14 @@
                     </div>
                     <div class="col-lg-3">
                         <label for="camisa">Tamanho da Camisa</label>
-                        <input type="text" name="camisa" class="form-control" id="camisa" placeholder="Ex.:GG" required> 
+                        <select name="camisa" class="form-control" id "camisa">
+                          <option>P</option>
+                          <option>M</option>
+                          <option>G</option>
+                          <option>GG</option>
+                          <option>EXG</option>
+                        </select>
+                        
                     </div>
                   </div>
                   <div class="form-group">
@@ -279,7 +286,7 @@
                         <input type="text" name="phone" class="form-control" id="phone" placeholder="(89) 99900-1122"> 
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
+                  <button type="submit" class="btn btn-default" onclick="return postContactToGoogle()">Submit</button>
                 </form>
             </div>
         </div>
@@ -323,6 +330,8 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
+
+    <script src="js/contact-google.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
